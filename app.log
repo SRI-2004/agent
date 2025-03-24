@@ -1,0 +1,1361 @@
+2025-03-24 16:18:27,806 - root - INFO - Firecrawl library imported successfully
+2025-03-24 16:18:27,808 - root - INFO - SerpAPI library imported successfully
+2025-03-24 16:18:27,809 - tools - INFO - Directly registering tool instances...
+2025-03-24 16:18:27,809 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 16:18:27,810 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 16:18:27,810 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 16:18:27,810 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 16:18:27,810 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 16:18:27,810 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 16:18:27,810 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 16:18:27,811 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 16:18:27,811 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 16:18:27,811 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 16:18:27,811 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 16:18:27,811 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 16:18:27,812 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 16:18:27,812 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 16:18:27,812 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 16:18:27,835 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 16:18:27,835 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 16:18:27,835 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 16:18:27,835 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 16:18:27,835 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 16:18:27,835 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 16:18:27,835 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 16:18:33,896 - api - INFO - API: Starting new conversation
+2025-03-24 16:18:33,897 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 16:18:33,897 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 16:18:33,897 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:18:33,897 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 16:18:33,897 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:18:35,833 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:18:35,835 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:18:35,835 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 16:18:35,835 - api - INFO - API: Conversation started successfully
+2025-03-24 16:18:43,090 - api - INFO - API: Processing message in stage: initial
+2025-03-24 16:18:43,090 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 16:18:43,090 - workflow_orchestrator - INFO - No URL found in initial stage message
+2025-03-24 16:18:43,090 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:18:43,090 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 16:18:43,090 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:18:44,636 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:18:44,637 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:18:44,637 - api - INFO - API: Message processed, new stage: initial
+2025-03-24 16:18:49,755 - api - INFO - API: Processing message in stage: initial
+2025-03-24 16:18:49,755 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 16:18:49,755 - workflow_orchestrator - INFO - URL detected in initial stage, enabling auto-flow
+2025-03-24 16:18:49,755 - workflow_orchestrator - INFO - Processing URL in initial stage
+2025-03-24 16:18:49,756 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 16:18:49,756 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 16:18:49,756 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 16:18:49,756 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 16:18:49,756 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 16:18:49,756 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 16:18:49,756 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 16:18:52,903 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 16:18:52,903 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 16:18:52,903 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 16:18:52,903 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 16:18:52,903 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 16:18:52,903 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 16:18:52,903 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 16:18:52,903 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:18:52,904 - workflow_orchestrator - INFO - Using system prompt for stage: url_analysis
+2025-03-24 16:18:52,904 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:19:08,045 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:19:08,046 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:19:08,046 - workflow_orchestrator - INFO - Auto-flow enabled, proceeding through workflow stages automatically
+2025-03-24 16:19:08,046 - workflow_orchestrator - INFO - Transition to market_research stage
+2025-03-24 16:19:08,046 - workflow_orchestrator - INFO - Starting market research
+2025-03-24 16:19:08,046 - workflow_orchestrator - INFO - Using product title for market research: ''
+2025-03-24 16:19:08,046 - workflow_orchestrator - WARNING - No product title available for market research
+2025-03-24 16:19:08,046 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:19:08,047 - workflow_orchestrator - INFO - Using system prompt for stage: market_research
+2025-03-24 16:19:08,047 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:19:27,214 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:19:27,221 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Transition to category_mapping stage
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Starting category mapping
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Category mapping with 0 features and 0 keywords
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Executing category tree tool
+2025-03-24 16:19:27,222 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 16:19:27,222 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': '', 'product_features': [], 'product_keywords': [], 'max_categories': 3, 'max_subcategories': 5}
+2025-03-24 16:19:27,222 - tools.category_tree_tool - INFO - Executing category tree tool with description: ...
+2025-03-24 16:19:27,222 - tools.category_tree_tool - INFO - Category mapping completed with 0 categories and 0 audience segments
+2025-03-24 16:19:27,222 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Successfully completed category mapping, storing results
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Generating response with category information
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Using system prompt for stage: category_mapping
+2025-03-24 16:19:27,222 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:19:28,725 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:19:28,726 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:19:28,726 - workflow_orchestrator - INFO - Transition to audience_segmentation stage
+2025-03-24 16:19:28,726 - workflow_orchestrator - INFO - Generating audience segments
+2025-03-24 16:19:28,726 - workflow_orchestrator - ERROR - No audience segments found in category data
+2025-03-24 16:19:28,726 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:19:28,726 - workflow_orchestrator - INFO - Using system prompt for stage: audience_segmentation
+2025-03-24 16:19:28,726 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:19:46,895 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:19:46,916 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:19:46,916 - workflow_orchestrator - INFO - Transition to marketing_strategy stage
+2025-03-24 16:19:46,916 - workflow_orchestrator - INFO - Generating marketing strategies
+2025-03-24 16:19:46,916 - workflow_orchestrator - INFO - Creating marketing strategies prompt
+2025-03-24 16:19:46,916 - workflow_orchestrator - INFO - Calling _generate_marketing_strategies method
+2025-03-24 16:19:46,916 - workflow_orchestrator - INFO - Generating marketing strategies with GPT-4
+2025-03-24 16:20:07,065 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:20:07,067 - workflow_orchestrator - INFO - Received marketing strategies response from GPT-4
+2025-03-24 16:20:07,067 - workflow_orchestrator - INFO - Parsed 7 marketing strategies
+2025-03-24 16:20:07,067 - workflow_orchestrator - INFO - Generated 7 marketing strategies
+2025-03-24 16:20:07,067 - workflow_orchestrator - INFO - Creating response with marketing strategies
+2025-03-24 16:20:07,067 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:20:07,067 - workflow_orchestrator - INFO - Using system prompt for stage: marketing_strategy
+2025-03-24 16:20:07,067 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:20:20,891 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:20:20,893 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:20:20,893 - workflow_orchestrator - INFO - Transition to final_summary stage
+2025-03-24 16:20:20,893 - workflow_orchestrator - INFO - Generating final summary
+2025-03-24 16:20:20,893 - workflow_orchestrator - INFO - Creating final summary for product: 
+2025-03-24 16:20:20,893 - workflow_orchestrator - INFO - Final summary generated successfully
+2025-03-24 16:20:20,893 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:20:20,893 - workflow_orchestrator - INFO - Using system prompt for stage: final_summary
+2025-03-24 16:20:20,893 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:20:33,399 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:20:33,400 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:20:33,400 - api - INFO - API: Message processed, new stage: final_summary
+2025-03-24 16:23:11,644 - root - INFO - Firecrawl library imported successfully
+2025-03-24 16:23:11,646 - root - INFO - SerpAPI library imported successfully
+2025-03-24 16:23:11,647 - tools - INFO - Directly registering tool instances...
+2025-03-24 16:23:11,647 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 16:23:11,648 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 16:23:11,648 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 16:23:11,648 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 16:23:11,648 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 16:23:11,648 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 16:23:11,648 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 16:23:11,649 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 16:23:11,649 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 16:23:11,649 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 16:23:11,649 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 16:23:11,649 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 16:23:11,650 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 16:23:11,650 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 16:23:11,650 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 16:23:11,672 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 16:23:11,672 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 16:23:11,672 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 16:23:11,673 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 16:23:11,673 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 16:23:11,673 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 16:23:11,673 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 16:23:15,279 - api - INFO - API: Starting new conversation
+2025-03-24 16:23:15,279 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 16:23:15,280 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 16:23:15,280 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:23:15,280 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 16:23:15,280 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:23:20,313 - api - INFO - API: Starting new conversation
+2025-03-24 16:23:20,313 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 16:23:20,313 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 16:23:20,313 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:23:20,313 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 16:23:20,313 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:23:21,304 - api - INFO - API: Processing message in stage: initial
+2025-03-24 16:23:21,304 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 16:23:21,304 - workflow_orchestrator - INFO - URL detected in initial stage, enabling auto-flow
+2025-03-24 16:23:21,304 - workflow_orchestrator - INFO - Processing URL in initial stage
+2025-03-24 16:23:21,304 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 16:23:21,304 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 16:23:21,304 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 16:23:21,305 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 16:23:21,305 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 16:23:21,305 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 16:23:21,305 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 16:23:24,493 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 16:23:24,493 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 16:23:24,493 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 16:23:24,493 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 16:23:24,493 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 16:23:24,493 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 16:23:24,493 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 16:23:24,493 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:23:24,493 - workflow_orchestrator - INFO - Using system prompt for stage: url_analysis
+2025-03-24 16:23:24,493 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:23:24,499 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:23:24,528 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:23:24,528 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 16:23:24,528 - api - INFO - API: Conversation started successfully
+2025-03-24 16:23:31,019 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:23:31,020 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:23:31,020 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 16:23:31,020 - api - INFO - API: Conversation started successfully
+2025-03-24 16:23:41,592 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:23:41,593 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:23:41,593 - workflow_orchestrator - INFO - Auto-flow enabled, proceeding through workflow stages automatically
+2025-03-24 16:23:41,593 - workflow_orchestrator - INFO - Transition to market_research stage
+2025-03-24 16:23:41,593 - workflow_orchestrator - INFO - Starting market research
+2025-03-24 16:23:41,593 - workflow_orchestrator - INFO - Using product title for market research: ''
+2025-03-24 16:23:41,593 - workflow_orchestrator - WARNING - No product title available for market research
+2025-03-24 16:23:41,593 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:23:41,593 - workflow_orchestrator - INFO - Using system prompt for stage: market_research
+2025-03-24 16:23:41,593 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:23:58,519 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:23:58,520 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:23:58,520 - workflow_orchestrator - INFO - Transition to category_mapping stage
+2025-03-24 16:23:58,520 - workflow_orchestrator - INFO - Starting category mapping
+2025-03-24 16:23:58,520 - workflow_orchestrator - INFO - Category mapping with 0 features and 0 keywords
+2025-03-24 16:23:58,520 - workflow_orchestrator - INFO - Executing category tree tool
+2025-03-24 16:23:58,521 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 16:23:58,521 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': '', 'product_features': [], 'product_keywords': [], 'max_categories': 3, 'max_subcategories': 5}
+2025-03-24 16:23:58,521 - tools.category_tree_tool - INFO - Executing category tree tool with description: ...
+2025-03-24 16:23:58,521 - tools.category_tree_tool - INFO - Category mapping completed with 0 categories and 0 audience segments
+2025-03-24 16:23:58,521 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 16:23:58,521 - workflow_orchestrator - INFO - Successfully completed category mapping, storing results
+2025-03-24 16:23:58,521 - workflow_orchestrator - INFO - Generating response with category information
+2025-03-24 16:23:58,521 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:23:58,521 - workflow_orchestrator - INFO - Using system prompt for stage: category_mapping
+2025-03-24 16:23:58,521 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:24:28,740 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:24:28,742 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:24:28,742 - workflow_orchestrator - INFO - Transition to audience_segmentation stage
+2025-03-24 16:24:28,742 - workflow_orchestrator - INFO - Generating audience segments
+2025-03-24 16:24:28,742 - workflow_orchestrator - ERROR - No audience segments found in category data
+2025-03-24 16:24:28,742 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:24:28,742 - workflow_orchestrator - INFO - Using system prompt for stage: audience_segmentation
+2025-03-24 16:24:28,743 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:25:09,094 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:25:09,095 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:25:09,095 - workflow_orchestrator - INFO - Transition to marketing_strategy stage
+2025-03-24 16:25:09,095 - workflow_orchestrator - INFO - Generating marketing strategies
+2025-03-24 16:25:09,095 - workflow_orchestrator - INFO - Creating marketing strategies prompt
+2025-03-24 16:25:09,095 - workflow_orchestrator - INFO - Calling _generate_marketing_strategies method
+2025-03-24 16:25:09,095 - workflow_orchestrator - INFO - Generating marketing strategies with GPT-4
+2025-03-24 16:25:34,845 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:25:34,846 - workflow_orchestrator - INFO - Received marketing strategies response from GPT-4
+2025-03-24 16:25:34,846 - workflow_orchestrator - INFO - Parsed 18 marketing strategies
+2025-03-24 16:25:34,846 - workflow_orchestrator - INFO - Generated 18 marketing strategies
+2025-03-24 16:25:34,846 - workflow_orchestrator - INFO - Creating response with marketing strategies
+2025-03-24 16:25:34,846 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:25:34,846 - workflow_orchestrator - INFO - Using system prompt for stage: marketing_strategy
+2025-03-24 16:25:34,846 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:26:04,745 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:26:04,746 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:26:04,746 - workflow_orchestrator - INFO - Transition to final_summary stage
+2025-03-24 16:26:04,747 - workflow_orchestrator - INFO - Generating final summary
+2025-03-24 16:26:04,747 - workflow_orchestrator - INFO - Creating final summary for product: 
+2025-03-24 16:26:04,747 - workflow_orchestrator - INFO - Final summary generated successfully
+2025-03-24 16:26:04,747 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:26:04,747 - workflow_orchestrator - INFO - Using system prompt for stage: final_summary
+2025-03-24 16:26:04,747 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:26:30,190 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:26:30,191 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:26:30,191 - api - INFO - API: Message processed, new stage: final_summary
+2025-03-24 16:45:36,585 - root - INFO - Firecrawl library imported successfully
+2025-03-24 16:45:36,588 - root - INFO - SerpAPI library imported successfully
+2025-03-24 16:45:36,591 - tools - INFO - Directly registering tool instances...
+2025-03-24 16:45:36,591 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 16:45:36,592 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 16:45:36,592 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 16:45:36,592 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 16:45:36,593 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 16:45:36,593 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 16:45:36,593 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 16:45:36,593 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 16:45:36,594 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 16:45:36,594 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 16:45:36,594 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 16:45:36,594 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 16:45:36,596 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 16:45:36,596 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 16:45:36,596 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 16:45:36,617 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 16:45:36,617 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 16:45:36,617 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 16:45:36,617 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 16:45:36,617 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 16:45:36,617 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 16:45:36,617 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 16:45:39,269 - api - INFO - API: Starting new conversation
+2025-03-24 16:45:39,269 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 16:45:39,269 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 16:45:39,269 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:45:39,269 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 16:45:39,270 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:45:40,727 - api - INFO - API: Processing message in stage: initial
+2025-03-24 16:45:40,727 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 16:45:40,727 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 16:45:40,727 - workflow_orchestrator - INFO - URL detected in initial stage, enabling auto-flow
+2025-03-24 16:45:40,727 - workflow_orchestrator - INFO - Processing URL in initial stage
+2025-03-24 16:45:40,727 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 16:45:40,727 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 16:45:40,727 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 16:45:40,728 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 16:45:40,728 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 16:45:40,728 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 16:45:40,728 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 16:45:45,418 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 16:45:45,418 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 16:45:45,418 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 16:45:45,418 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 16:45:45,418 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 16:45:45,418 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 16:45:45,418 - workflow_orchestrator - WARNING - Product data missing title
+2025-03-24 16:45:45,418 - workflow_orchestrator - WARNING - Product data missing features, adding placeholder feature
+2025-03-24 16:45:45,418 - workflow_orchestrator - WARNING - Product data missing description
+2025-03-24 16:45:45,418 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 16:45:45,418 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:45:45,418 - workflow_orchestrator - INFO - Using system prompt for stage: url_analysis
+2025-03-24 16:45:45,418 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:45:50,628 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:45:50,667 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:45:50,667 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 16:45:50,667 - api - INFO - API: Conversation started successfully
+2025-03-24 16:46:11,312 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:46:11,313 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:46:11,314 - workflow_orchestrator - INFO - Auto-flow enabled, proceeding through workflow stages automatically
+2025-03-24 16:46:11,314 - workflow_orchestrator - INFO - Transition to market_research stage
+2025-03-24 16:46:11,314 - workflow_orchestrator - INFO - Starting market research
+2025-03-24 16:46:11,314 - workflow_orchestrator - INFO - Using product title for market research: 'Unknown Product'
+2025-03-24 16:46:11,314 - workflow_orchestrator - INFO - Executing SERP analysis for query: 'Unknown Product'
+2025-03-24 16:46:11,314 - tools - INFO - Executing tool requested: serp_analysis
+2025-03-24 16:46:11,314 - tools - INFO - Executing tool: serp_analysis with parameters: {'query': 'Unknown Product', 'results_count': 10}
+2025-03-24 16:46:11,314 - tools.serp_analysis_tool - INFO - Using SerpAPI to analyze query: Unknown Product
+2025-03-24 16:46:11,443 - tools.serp_analysis_tool - INFO - Successfully analyzed market data for query: Unknown Product
+2025-03-24 16:46:11,443 - tools.serp_analysis_tool - INFO - Found 5 competitors and 10 keywords
+2025-03-24 16:46:11,443 - tools - INFO - Tool execution completed: serp_analysis, success: True
+2025-03-24 16:46:11,443 - workflow_orchestrator - INFO - Successfully completed market research, storing results
+2025-03-24 16:46:11,443 - workflow_orchestrator - INFO - Generating response with market information
+2025-03-24 16:46:11,443 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:46:11,443 - workflow_orchestrator - INFO - Using system prompt for stage: market_research
+2025-03-24 16:46:11,444 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:46:35,074 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:46:35,075 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:46:35,075 - workflow_orchestrator - INFO - Transition to category_mapping stage
+2025-03-24 16:46:35,075 - workflow_orchestrator - INFO - Starting category mapping
+2025-03-24 16:46:35,076 - workflow_orchestrator - INFO - Category mapping input - Description length: 39, Features count: 1, Keywords count: 10
+2025-03-24 16:46:35,076 - workflow_orchestrator - INFO - Sample features: Product available online
+2025-03-24 16:46:35,076 - workflow_orchestrator - INFO - Sample keywords: products, designer, brand, have, been
+2025-03-24 16:46:35,076 - workflow_orchestrator - INFO - Category mapping with 1 features and 10 keywords
+2025-03-24 16:46:35,076 - workflow_orchestrator - INFO - Executing category tree tool
+2025-03-24 16:46:35,076 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 16:46:35,076 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'product_features': ['Product available online'], 'product_keywords': ['products', 'designer', 'brand', 'have', 'been', 'released', 'japanese', 'since', 'whether', 'author'], 'max_categories': 3, 'max_subcategories': 5}
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Executing category tree tool with description: Online product at https://sleepyowl.co/...
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Starting category matching with description length: 39, features count: 1, keywords count: 10
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Combined text length for matching: 137
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Available top-level categories for matching: ['Demographics', 'Financial', 'Home', 'Life Events', 'Interests', 'Shopping and Fashion', 'Technology', 'Behaviors']
+2025-03-24 16:46:35,076 - tools.category_tree_tool - WARNING - No category matches found, creating default category
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Creating completely new default category
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Returning 1 categories. Top category: General Consumer Products
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Generating audience segments from 1 matched categories
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Creating segments for category: General Consumer Products with 1 subcategories
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Adding general audience segments due to limited specific segments
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Generated 4 audience segments
+2025-03-24 16:46:35,076 - tools.category_tree_tool - INFO - Category mapping completed with 1 categories and 4 audience segments
+2025-03-24 16:46:35,077 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 16:46:35,077 - workflow_orchestrator - INFO - Successfully completed category mapping, storing results
+2025-03-24 16:46:35,077 - workflow_orchestrator - INFO - Generating response with category information
+2025-03-24 16:46:35,077 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:46:35,077 - workflow_orchestrator - INFO - Using system prompt for stage: category_mapping
+2025-03-24 16:46:35,077 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:47:04,845 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:47:04,883 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:47:04,883 - workflow_orchestrator - INFO - Transition to audience_segmentation stage
+2025-03-24 16:47:04,883 - workflow_orchestrator - INFO - Generating audience segments
+2025-03-24 16:47:04,883 - workflow_orchestrator - INFO - Found 4 audience segments in category data
+2025-03-24 16:47:04,883 - workflow_orchestrator - INFO - Segment 1: General Consumer Products Enthusiasts
+2025-03-24 16:47:04,884 - workflow_orchestrator - INFO - Segment 2: Value-Conscious Shoppers
+2025-03-24 16:47:04,884 - workflow_orchestrator - INFO - Segment 3: Convenience Shoppers
+2025-03-24 16:47:04,884 - workflow_orchestrator - INFO - Segment 4: Quality-Focused Consumers
+2025-03-24 16:47:04,884 - workflow_orchestrator - INFO - Generating response with audience segments
+2025-03-24 16:47:04,884 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:47:04,884 - workflow_orchestrator - INFO - Using system prompt for stage: audience_segmentation
+2025-03-24 16:47:04,884 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:47:30,468 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:47:30,469 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:47:30,469 - workflow_orchestrator - INFO - Transition to marketing_strategy stage
+2025-03-24 16:47:30,469 - workflow_orchestrator - INFO - Generating marketing strategies
+2025-03-24 16:47:30,469 - workflow_orchestrator - INFO - Creating marketing strategies prompt
+2025-03-24 16:47:30,469 - workflow_orchestrator - INFO - Calling _generate_marketing_strategies method
+2025-03-24 16:47:30,470 - workflow_orchestrator - INFO - Generating marketing strategies with GPT-4
+2025-03-24 16:47:44,392 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:47:44,393 - workflow_orchestrator - INFO - Received marketing strategies response from GPT-4
+2025-03-24 16:47:44,393 - workflow_orchestrator - INFO - Parsed 7 marketing strategies
+2025-03-24 16:47:44,393 - workflow_orchestrator - INFO - Generated 7 marketing strategies
+2025-03-24 16:47:44,393 - workflow_orchestrator - INFO - Creating response with marketing strategies
+2025-03-24 16:47:44,393 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:47:44,393 - workflow_orchestrator - INFO - Using system prompt for stage: marketing_strategy
+2025-03-24 16:47:44,393 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:48:13,679 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:48:13,680 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:48:13,680 - workflow_orchestrator - INFO - Transition to final_summary stage
+2025-03-24 16:48:13,680 - workflow_orchestrator - INFO - Generating final summary
+2025-03-24 16:48:13,680 - workflow_orchestrator - INFO - Creating final summary for product: Unknown Product
+2025-03-24 16:48:13,680 - workflow_orchestrator - INFO - Final summary generated successfully
+2025-03-24 16:48:13,680 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:48:13,680 - workflow_orchestrator - INFO - Using system prompt for stage: final_summary
+2025-03-24 16:48:13,680 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:48:41,432 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:48:41,434 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:48:41,434 - api - INFO - API: Message processed, new stage: final_summary
+2025-03-24 16:54:09,896 - root - INFO - Firecrawl library imported successfully
+2025-03-24 16:54:09,899 - root - INFO - SerpAPI library imported successfully
+2025-03-24 16:54:09,903 - tools - INFO - Directly registering tool instances...
+2025-03-24 16:54:09,903 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 16:54:09,904 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 16:54:09,904 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 16:54:09,904 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 16:54:09,904 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 16:54:09,904 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 16:54:09,904 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 16:54:09,905 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 16:54:09,905 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 16:54:09,905 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 16:54:09,905 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 16:54:09,905 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 16:54:09,906 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 16:54:09,906 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 16:54:09,906 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 16:54:09,927 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 16:54:09,927 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 16:54:09,927 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 16:54:09,927 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 16:54:09,927 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 16:54:09,927 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 16:54:09,927 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 16:54:12,776 - api - INFO - API: Starting new conversation
+2025-03-24 16:54:12,776 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 16:54:12,776 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 16:54:12,776 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:54:12,776 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 16:54:12,776 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:54:14,313 - api - INFO - API: Processing message in stage: initial
+2025-03-24 16:54:14,313 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 16:54:14,313 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 16:54:14,313 - workflow_orchestrator - INFO - URL detected in initial stage, enabling auto-flow
+2025-03-24 16:54:14,313 - workflow_orchestrator - INFO - Processing URL in initial stage
+2025-03-24 16:54:14,313 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 16:54:14,313 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 16:54:14,313 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 16:54:14,313 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 16:54:14,313 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 16:54:14,313 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 16:54:14,313 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 16:54:17,550 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 16:54:17,550 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 16:54:17,550 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 16:54:17,550 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 16:54:17,551 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 16:54:17,551 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 16:54:17,551 - workflow_orchestrator - WARNING - Product data missing title
+2025-03-24 16:54:17,551 - workflow_orchestrator - WARNING - Product data missing features, adding placeholder feature
+2025-03-24 16:54:17,551 - workflow_orchestrator - WARNING - Product data missing description
+2025-03-24 16:54:17,551 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 16:54:17,551 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:54:17,551 - workflow_orchestrator - INFO - Using system prompt for stage: url_analysis
+2025-03-24 16:54:17,551 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:54:21,496 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:54:21,534 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:54:21,534 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 16:54:21,534 - api - INFO - API: Conversation started successfully
+2025-03-24 16:54:30,297 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:54:30,298 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:54:30,298 - workflow_orchestrator - INFO - Auto-flow enabled, proceeding through workflow stages automatically
+2025-03-24 16:54:30,298 - workflow_orchestrator - INFO - Transition to market_research stage
+2025-03-24 16:54:30,298 - workflow_orchestrator - INFO - Starting market research
+2025-03-24 16:54:30,298 - workflow_orchestrator - INFO - Using product title for market research: 'Unknown Product'
+2025-03-24 16:54:30,298 - workflow_orchestrator - INFO - Executing SERP analysis for query: 'Unknown Product'
+2025-03-24 16:54:30,298 - tools - INFO - Executing tool requested: serp_analysis
+2025-03-24 16:54:30,298 - tools - INFO - Executing tool: serp_analysis with parameters: {'query': 'Unknown Product', 'results_count': 10}
+2025-03-24 16:54:30,298 - tools.serp_analysis_tool - INFO - Using SerpAPI to analyze query: Unknown Product
+2025-03-24 16:54:30,424 - tools.serp_analysis_tool - INFO - Successfully analyzed market data for query: Unknown Product
+2025-03-24 16:54:30,424 - tools.serp_analysis_tool - INFO - Found 5 competitors and 10 keywords
+2025-03-24 16:54:30,424 - tools - INFO - Tool execution completed: serp_analysis, success: True
+2025-03-24 16:54:30,424 - workflow_orchestrator - INFO - Successfully completed market research, storing results
+2025-03-24 16:54:30,424 - workflow_orchestrator - INFO - Generating response with market information
+2025-03-24 16:54:30,425 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:54:30,425 - workflow_orchestrator - INFO - Using system prompt for stage: market_research
+2025-03-24 16:54:30,425 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:54:45,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:54:45,261 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:54:45,261 - workflow_orchestrator - INFO - Transition to category_mapping stage
+2025-03-24 16:54:45,261 - workflow_orchestrator - INFO - Starting LLM-guided category mapping
+2025-03-24 16:54:45,261 - workflow_orchestrator - INFO - Starting recursive category exploration for product: Unknown Product
+2025-03-24 16:54:45,261 - workflow_orchestrator - INFO - Getting all top-level categories
+2025-03-24 16:54:45,261 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 16:54:45,261 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_toplevel'}
+2025-03-24 16:54:45,261 - tools.category_tree_tool - INFO - Getting all top-level categories for LLM to choose from
+2025-03-24 16:54:45,261 - tools.category_tree_tool - INFO - Getting all top-level categories
+2025-03-24 16:54:45,261 - tools.category_tree_tool - INFO - Found 8 top-level categories
+2025-03-24 16:54:45,261 - tools.category_tree_tool - INFO - Returning 8 top-level categories for LLM exploration
+2025-03-24 16:54:45,261 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 16:54:45,262 - workflow_orchestrator - INFO - Getting LLM to select relevant top-level categories
+2025-03-24 16:54:53,427 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:54:53,428 - workflow_orchestrator - INFO - LLM selected 3 top-level categories: ['Shopping and Fashion', 'Interests', 'Technology']
+2025-03-24 16:54:53,428 - workflow_orchestrator - INFO - Exploring subcategories for Shopping and Fashion
+2025-03-24 16:54:53,428 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 16:54:53,428 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_subcategories', 'parent_category': 'Shopping and Fashion'}
+2025-03-24 16:54:53,428 - tools.category_tree_tool - INFO - Getting subcategories for category: Shopping and Fashion
+2025-03-24 16:54:53,428 - tools.category_tree_tool - INFO - Looking for subcategories of: Shopping and Fashion
+2025-03-24 16:54:53,428 - tools.category_tree_tool - INFO - Found 3 subcategories for Shopping and Fashion
+2025-03-24 16:54:53,428 - tools.category_tree_tool - INFO - Returning 3 subcategories for parent category: Shopping and Fashion
+2025-03-24 16:54:53,428 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 16:54:53,429 - workflow_orchestrator - INFO - Getting LLM to select relevant subcategories for Shopping and Fashion
+2025-03-24 16:54:55,287 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:54:55,288 - workflow_orchestrator - INFO - LLM selected 1 subcategories for Shopping and Fashion
+2025-03-24 16:54:55,288 - workflow_orchestrator - INFO - Exploring subcategories for Interests
+2025-03-24 16:54:55,288 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 16:54:55,288 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_subcategories', 'parent_category': 'Interests'}
+2025-03-24 16:54:55,288 - tools.category_tree_tool - INFO - Getting subcategories for category: Interests
+2025-03-24 16:54:55,288 - tools.category_tree_tool - INFO - Looking for subcategories of: Interests
+2025-03-24 16:54:55,288 - tools.category_tree_tool - INFO - Found 2 subcategories for Interests
+2025-03-24 16:54:55,288 - tools.category_tree_tool - INFO - Returning 2 subcategories for parent category: Interests
+2025-03-24 16:54:55,289 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 16:54:55,289 - workflow_orchestrator - INFO - Getting LLM to select relevant subcategories for Interests
+2025-03-24 16:54:57,744 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:54:57,745 - workflow_orchestrator - INFO - LLM selected 1 subcategories for Interests
+2025-03-24 16:54:57,745 - workflow_orchestrator - INFO - Exploring subcategories for Technology
+2025-03-24 16:54:57,745 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 16:54:57,745 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_subcategories', 'parent_category': 'Technology'}
+2025-03-24 16:54:57,745 - tools.category_tree_tool - INFO - Getting subcategories for category: Technology
+2025-03-24 16:54:57,745 - tools.category_tree_tool - INFO - Looking for subcategories of: Technology
+2025-03-24 16:54:57,745 - tools.category_tree_tool - INFO - Found 2 subcategories for Technology
+2025-03-24 16:54:57,745 - tools.category_tree_tool - INFO - Returning 2 subcategories for parent category: Technology
+2025-03-24 16:54:57,745 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 16:54:57,746 - workflow_orchestrator - INFO - Getting LLM to select relevant subcategories for Technology
+2025-03-24 16:54:58,768 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:54:58,769 - workflow_orchestrator - INFO - LLM selected 1 subcategories for Technology
+2025-03-24 16:54:59,115 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-24 16:54:59,116 - workflow_orchestrator - ERROR - Error in category mapping: Error code: 400 - {'error': {'message': "'messages' must contain the word 'json' in some form, to use 'response_format' of type 'json_object'.", 'type': 'invalid_request_error', 'param': 'messages', 'code': None}}
+Traceback (most recent call last):
+  File "/home/srinivasan/FIles/frontend/agent/workflow_orchestrator.py", line 667, in _handle_category_mapping
+    audience_segments_response = await self.client.chat.completions.create(
+  File "/home/srinivasan/.local/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py", line 2000, in create
+    return await self._post(
+  File "/home/srinivasan/.local/lib/python3.10/site-packages/openai/_base_client.py", line 1767, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+  File "/home/srinivasan/.local/lib/python3.10/site-packages/openai/_base_client.py", line 1461, in request
+    return await self._request(
+  File "/home/srinivasan/.local/lib/python3.10/site-packages/openai/_base_client.py", line 1562, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "'messages' must contain the word 'json' in some form, to use 'response_format' of type 'json_object'.", 'type': 'invalid_request_error', 'param': 'messages', 'code': None}}
+2025-03-24 16:54:59,117 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:54:59,117 - workflow_orchestrator - INFO - Using system prompt for stage: category_mapping
+2025-03-24 16:54:59,117 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:55:21,706 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:55:21,717 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:55:21,717 - workflow_orchestrator - INFO - Transition to audience_segmentation stage
+2025-03-24 16:55:21,717 - workflow_orchestrator - INFO - Generating audience segments
+2025-03-24 16:55:21,717 - workflow_orchestrator - ERROR - Missing category data for audience segmentation
+2025-03-24 16:55:21,717 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:55:21,717 - workflow_orchestrator - INFO - Using system prompt for stage: audience_segmentation
+2025-03-24 16:55:21,717 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:56:01,943 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:56:01,963 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:56:01,963 - workflow_orchestrator - INFO - Transition to marketing_strategy stage
+2025-03-24 16:56:01,963 - workflow_orchestrator - INFO - Generating marketing strategies
+2025-03-24 16:56:01,963 - workflow_orchestrator - INFO - Creating marketing strategies prompt
+2025-03-24 16:56:01,963 - workflow_orchestrator - INFO - Calling _generate_marketing_strategies method
+2025-03-24 16:56:01,963 - workflow_orchestrator - INFO - Generating marketing strategies with GPT-4
+2025-03-24 16:56:20,181 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:56:20,182 - workflow_orchestrator - INFO - Received marketing strategies response from GPT-4
+2025-03-24 16:56:20,183 - workflow_orchestrator - INFO - Parsed 6 marketing strategies
+2025-03-24 16:56:20,183 - workflow_orchestrator - INFO - Generated 6 marketing strategies
+2025-03-24 16:56:20,183 - workflow_orchestrator - INFO - Creating response with marketing strategies
+2025-03-24 16:56:20,183 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:56:20,183 - workflow_orchestrator - INFO - Using system prompt for stage: marketing_strategy
+2025-03-24 16:56:20,183 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:57:04,310 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:57:04,311 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:57:04,311 - workflow_orchestrator - INFO - Transition to final_summary stage
+2025-03-24 16:57:04,311 - workflow_orchestrator - INFO - Generating final summary
+2025-03-24 16:57:04,311 - workflow_orchestrator - INFO - Creating final summary for product: Unknown Product
+2025-03-24 16:57:04,311 - workflow_orchestrator - INFO - Final summary generated successfully
+2025-03-24 16:57:04,311 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 16:57:04,311 - workflow_orchestrator - INFO - Using system prompt for stage: final_summary
+2025-03-24 16:57:04,311 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 16:57:50,595 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 16:57:50,596 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 16:57:50,596 - api - INFO - API: Message processed, new stage: final_summary
+2025-03-24 18:21:21,802 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:21:21,807 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:21:21,808 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:21:21,809 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:21:21,809 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:21:21,809 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:21:21,809 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:21:21,809 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:21:21,809 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:21:21,810 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:21:21,810 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:21:21,810 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:21:21,810 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:21:21,810 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:21:21,810 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:21:21,812 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:21:21,812 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:21:21,812 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:21:21,836 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:21:21,836 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:21:21,836 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:21:21,836 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:21:21,836 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:21:21,836 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:21:21,836 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:21:45,317 - api - INFO - API: Starting new conversation
+2025-03-24 18:21:45,318 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:21:45,318 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:21:45,318 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:21:45,318 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:21:45,318 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:21:50,364 - api - INFO - API: Starting new conversation
+2025-03-24 18:21:50,364 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:21:50,364 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:21:50,364 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:21:50,364 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:21:50,364 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:21:54,044 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:21:54,056 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:21:54,056 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:21:54,056 - api - INFO - API: Conversation started successfully
+2025-03-24 18:21:55,408 - api - INFO - API: Starting new conversation
+2025-03-24 18:21:55,408 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:21:55,409 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:21:55,409 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:21:55,409 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:21:55,409 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:22:00,159 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:22:00,161 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:22:00,161 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:22:00,161 - api - INFO - API: Conversation started successfully
+2025-03-24 18:22:00,476 - api - INFO - API: Starting new conversation
+2025-03-24 18:22:00,476 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:22:00,476 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:22:00,476 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:22:00,476 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:22:00,476 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:22:03,962 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:22:03,964 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:22:03,964 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:22:03,964 - api - INFO - API: Conversation started successfully
+2025-03-24 18:22:05,515 - api - INFO - API: Starting new conversation
+2025-03-24 18:22:05,515 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:22:05,515 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:22:05,515 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:22:05,515 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:22:05,515 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:22:08,345 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:22:08,347 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:22:08,347 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:22:08,347 - api - INFO - API: Conversation started successfully
+2025-03-24 18:22:15,302 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:22:15,305 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:22:15,305 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:22:15,305 - api - INFO - API: Conversation started successfully
+2025-03-24 18:25:19,786 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:25:19,789 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:25:19,790 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:25:19,790 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:25:19,790 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:25:19,790 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:25:19,790 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:25:19,791 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:25:19,791 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:25:19,791 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:25:19,791 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:25:19,791 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:25:19,792 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:25:19,792 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:25:19,792 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:25:19,798 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:25:19,799 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:25:19,800 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:25:19,915 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:25:19,915 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:25:19,916 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:25:19,916 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:25:19,916 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:25:19,916 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:25:19,916 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:25:21,972 - api - INFO - API: Starting new conversation
+2025-03-24 18:25:21,974 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:25:21,974 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:25:21,975 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:25:21,976 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:25:21,976 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:25:27,108 - api - INFO - API: Starting new conversation
+2025-03-24 18:25:27,108 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:25:27,108 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:25:27,108 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:25:27,108 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:25:27,108 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:25:32,259 - api - INFO - API: Starting new conversation
+2025-03-24 18:25:32,259 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:25:32,259 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:25:32,259 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:25:32,259 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:25:32,259 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:25:34,018 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:25:34,020 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:25:34,020 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:25:34,020 - api - INFO - API: Conversation started successfully
+2025-03-24 18:25:36,578 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:25:36,579 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:25:36,579 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:25:36,579 - api - INFO - API: Conversation started successfully
+2025-03-24 18:25:37,390 - api - INFO - API: Starting new conversation
+2025-03-24 18:25:37,390 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:25:37,390 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:25:37,390 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:25:37,390 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:25:37,390 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:25:40,778 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:25:40,779 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:25:40,779 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:25:40,779 - api - INFO - API: Conversation started successfully
+2025-03-24 18:25:43,586 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:25:43,593 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:25:43,593 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:25:43,593 - api - INFO - API: Conversation started successfully
+2025-03-24 18:26:09,160 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:26:09,163 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:26:09,164 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:26:09,164 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:26:09,165 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:26:09,165 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:26:09,165 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:26:09,165 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:26:09,165 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:26:09,165 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:26:09,166 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:26:09,166 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:26:09,166 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:26:09,166 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:26:09,166 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:26:09,167 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:26:09,167 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:26:09,167 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:26:09,193 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:26:09,194 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:26:09,194 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:26:09,194 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:26:09,194 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:26:09,194 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:26:09,194 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:26:15,541 - api - INFO - API: Starting new conversation
+2025-03-24 18:26:15,541 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:26:15,541 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:26:15,541 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:26:15,541 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:26:15,541 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:26:17,836 - api - INFO - API: Processing message in stage: initial
+2025-03-24 18:26:17,836 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 18:26:17,836 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 18:26:17,836 - workflow_orchestrator - INFO - No analysis request or URL detected, maintaining conversation mode
+2025-03-24 18:26:17,836 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:26:17,836 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:26:17,836 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:26:20,481 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:26:20,484 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:26:20,484 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:26:20,484 - api - INFO - API: Conversation started successfully
+2025-03-24 18:26:23,784 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:26:23,786 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:26:23,786 - api - INFO - API: Message processed, new stage: initial
+2025-03-24 18:31:30,639 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:31:30,642 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:31:30,643 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:31:30,643 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:31:30,644 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:31:30,644 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:31:30,644 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:31:30,644 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:31:30,644 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:31:30,644 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:31:30,645 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:31:30,645 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:31:30,645 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:31:30,645 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:31:30,645 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:31:30,646 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:31:30,646 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:31:30,647 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:31:30,672 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:31:30,672 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:31:30,672 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:31:30,672 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:31:30,672 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:31:30,672 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:31:30,672 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:31:33,210 - api - INFO - API: Starting new conversation
+2025-03-24 18:31:33,210 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:31:33,210 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:31:33,210 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:31:33,210 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:31:33,210 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:31:38,270 - api - INFO - API: Starting new conversation
+2025-03-24 18:31:38,270 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:31:38,270 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:31:38,270 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:31:38,270 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:31:38,270 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:31:42,862 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:31:42,868 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:31:42,868 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:31:42,868 - api - INFO - API: Conversation started successfully
+2025-03-24 18:31:43,332 - api - INFO - API: Starting new conversation
+2025-03-24 18:31:43,332 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:31:43,332 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:31:43,332 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:31:43,332 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:31:43,332 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:31:48,377 - api - INFO - API: Starting new conversation
+2025-03-24 18:31:48,377 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:31:48,377 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:31:48,377 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:31:48,377 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:31:48,377 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:31:50,531 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:31:50,533 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:31:50,534 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:31:50,534 - api - INFO - API: Conversation started successfully
+2025-03-24 18:31:55,991 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:31:55,995 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:31:55,995 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:31:55,995 - api - INFO - API: Conversation started successfully
+2025-03-24 18:31:57,142 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:31:57,143 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:31:57,143 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:31:57,143 - api - INFO - API: Conversation started successfully
+2025-03-24 18:39:44,593 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:39:44,597 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:39:44,598 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:39:44,598 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:39:44,599 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:39:44,599 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:39:44,599 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:39:44,599 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:39:44,599 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:39:44,600 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:39:44,600 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:39:44,600 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:39:44,600 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:39:44,600 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:39:44,600 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:39:44,601 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:39:44,601 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:39:44,602 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:39:44,626 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:39:44,626 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:39:44,626 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:39:44,626 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:39:44,626 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:39:44,626 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:39:44,626 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:40:04,785 - api - INFO - API: Starting new conversation
+2025-03-24 18:40:04,785 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:40:04,785 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:40:04,785 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:40:04,785 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:40:04,785 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:40:21,990 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:40:22,011 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:40:22,011 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:40:22,011 - api - INFO - API: Conversation started successfully
+2025-03-24 18:41:25,258 - api - INFO - API: Starting new conversation
+2025-03-24 18:41:25,258 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:41:25,258 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:41:25,258 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:41:25,258 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:41:25,258 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:41:33,421 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:41:33,441 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:41:33,441 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:41:33,441 - api - INFO - API: Conversation started successfully
+2025-03-24 18:43:35,913 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:43:35,915 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:43:35,916 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:43:35,916 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:43:35,916 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:43:35,916 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:43:35,916 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:43:35,916 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:43:35,916 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:43:35,917 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:43:35,917 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:43:35,917 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:43:35,917 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:43:35,917 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:43:35,917 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:43:35,919 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:43:35,919 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:43:35,919 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:43:35,941 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:43:35,941 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:43:35,941 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:43:35,942 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:43:35,942 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:43:35,942 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:43:35,942 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:43:44,878 - api - INFO - API: Starting new conversation
+2025-03-24 18:43:44,878 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:43:44,878 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:43:44,878 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:43:44,879 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:43:44,879 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:43:53,738 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:43:53,764 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:43:53,764 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:43:53,764 - api - INFO - API: Conversation started successfully
+2025-03-24 18:44:25,778 - api - INFO - API: Processing message in stage: initial
+2025-03-24 18:44:25,778 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 18:44:25,778 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 18:44:25,778 - workflow_orchestrator - INFO - URL detected but no explicit analysis request. Asking for confirmation.
+2025-03-24 18:44:25,778 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:44:25,778 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:44:25,778 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:44:40,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:44:40,261 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:44:40,262 - api - INFO - API: Message processed, new stage: initial
+2025-03-24 18:45:33,996 - api - INFO - API: Processing message in stage: initial
+2025-03-24 18:45:33,996 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 18:45:33,996 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 18:45:33,996 - workflow_orchestrator - INFO - Analysis requested but no URL provided
+2025-03-24 18:45:33,996 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:45:33,996 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:45:33,997 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:45:54,505 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:45:54,506 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:45:54,506 - api - INFO - API: Message processed, new stage: initial
+2025-03-24 18:46:24,169 - api - INFO - API: Processing message in stage: initial
+2025-03-24 18:46:24,169 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 18:46:24,169 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 18:46:24,169 - workflow_orchestrator - INFO - URL detected but no explicit analysis request. Asking for confirmation.
+2025-03-24 18:46:24,169 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:46:24,169 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:46:24,169 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:46:44,376 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:46:44,377 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:46:44,377 - api - INFO - API: Message processed, new stage: initial
+2025-03-24 18:48:19,407 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:48:19,409 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:48:19,410 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:48:19,410 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:48:19,411 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:48:19,411 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:48:19,411 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:48:19,412 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:48:19,412 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:48:19,412 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:48:19,412 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:48:19,412 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:48:19,412 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:48:19,413 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:48:19,413 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:48:19,414 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:48:19,414 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:48:19,414 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:48:19,435 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:48:19,435 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:48:19,435 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:48:19,436 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:48:19,436 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:48:19,436 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:48:19,436 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:48:24,892 - api - INFO - API: Starting new conversation
+2025-03-24 18:48:24,893 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:48:24,893 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:48:24,893 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:48:24,893 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:48:24,893 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:48:26,181 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:48:26,183 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:48:26,183 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:48:26,183 - api - INFO - API: Conversation started successfully
+2025-03-24 18:48:35,236 - api - INFO - API: Processing message in stage: initial
+2025-03-24 18:48:35,236 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 18:48:35,236 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 18:48:35,236 - workflow_orchestrator - INFO - Analysis requested with URL, starting workflow
+2025-03-24 18:48:35,236 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 18:48:35,236 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 18:48:35,236 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 18:48:35,236 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 18:48:35,236 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 18:48:35,236 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 18:48:35,236 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 18:48:42,212 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 18:48:42,212 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 18:48:42,212 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 18:48:42,212 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 18:48:42,212 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 18:48:42,212 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 18:48:42,212 - workflow_orchestrator - WARNING - Product data missing title
+2025-03-24 18:48:42,212 - workflow_orchestrator - WARNING - Product data missing features, adding placeholder feature
+2025-03-24 18:48:42,212 - workflow_orchestrator - WARNING - Product data missing description
+2025-03-24 18:48:42,213 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 18:48:42,213 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:48:42,213 - workflow_orchestrator - INFO - Using system prompt for stage: url_analysis
+2025-03-24 18:48:42,213 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:49:05,455 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:49:05,458 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:49:05,458 - api - INFO - API: Message processed, new stage: url_analysis
+2025-03-24 18:53:37,587 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:53:37,589 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:53:37,590 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:53:37,590 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:53:37,591 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:53:37,591 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:53:37,591 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:53:37,591 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:53:37,591 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:53:37,591 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:53:37,592 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:53:37,592 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:53:37,592 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:53:37,592 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:53:37,592 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:53:37,593 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:53:37,593 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:53:37,593 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:53:37,616 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:53:37,616 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:53:37,616 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:53:37,616 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:53:37,616 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:53:37,616 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:53:37,616 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:53:59,651 - api - INFO - API: Starting new conversation
+2025-03-24 18:53:59,651 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:53:59,651 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:53:59,652 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:53:59,652 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:53:59,652 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:54:01,380 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:54:01,382 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:54:01,382 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:54:01,382 - api - INFO - API: Conversation started successfully
+2025-03-24 18:54:12,291 - api - INFO - API: Processing message in stage: initial
+2025-03-24 18:54:12,291 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 18:54:12,291 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 18:54:12,291 - workflow_orchestrator - INFO - Analysis requested with URL, starting workflow
+2025-03-24 18:54:12,291 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 18:54:12,291 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 18:54:12,291 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 18:54:12,291 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 18:54:12,291 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 18:54:12,291 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 18:54:12,291 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 18:54:19,276 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 18:54:19,276 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 18:54:19,276 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 18:54:19,276 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 18:54:19,276 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 18:54:19,276 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 18:54:19,276 - workflow_orchestrator - WARNING - Product data missing title
+2025-03-24 18:54:19,276 - workflow_orchestrator - WARNING - Product data missing features, adding placeholder feature
+2025-03-24 18:54:19,276 - workflow_orchestrator - WARNING - Product data missing description
+2025-03-24 18:54:19,277 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 18:54:19,277 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:54:19,277 - workflow_orchestrator - INFO - Using system prompt for stage: url_analysis
+2025-03-24 18:54:19,277 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:54:36,826 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:54:36,834 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:54:36,834 - api - INFO - API: Message processed, new stage: url_analysis
+2025-03-24 18:56:19,388 - api - INFO - API: Starting new conversation
+2025-03-24 18:56:19,388 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:56:19,388 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:56:19,388 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:56:19,388 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:56:19,388 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:56:20,771 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:56:20,772 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:56:20,772 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:56:20,772 - api - INFO - API: Conversation started successfully
+2025-03-24 18:56:27,981 - api - INFO - API: Processing message in stage: initial
+2025-03-24 18:56:27,981 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 18:56:27,981 - workflow_orchestrator - INFO - Current data state - Product data exists: True, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 18:56:27,981 - workflow_orchestrator - INFO - Product data - Title: Unknown Product, Features count: 1
+2025-03-24 18:56:27,982 - workflow_orchestrator - INFO - Analysis requested with URL, starting workflow
+2025-03-24 18:56:27,982 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 18:56:27,982 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 18:56:27,982 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 18:56:27,982 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 18:56:27,982 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 18:56:27,982 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 18:56:27,982 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 18:56:34,438 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 18:56:34,439 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 18:56:34,439 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 18:56:34,439 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 18:56:34,439 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 18:56:34,439 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 18:56:34,439 - workflow_orchestrator - WARNING - Product data missing title
+2025-03-24 18:56:34,439 - workflow_orchestrator - WARNING - Product data missing features, adding placeholder feature
+2025-03-24 18:56:34,439 - workflow_orchestrator - WARNING - Product data missing description
+2025-03-24 18:56:34,439 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 18:56:34,439 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:56:34,439 - workflow_orchestrator - INFO - Using system prompt for stage: url_analysis
+2025-03-24 18:56:34,439 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:56:50,053 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:56:50,054 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:56:50,054 - api - INFO - API: Message processed, new stage: url_analysis
+2025-03-24 18:57:08,744 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:57:08,746 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:57:08,747 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:57:08,748 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:57:08,748 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:57:08,748 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:57:08,748 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:57:08,749 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:57:08,749 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:57:08,749 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:57:08,749 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:57:08,749 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:57:08,749 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:57:08,750 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:57:08,750 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:57:08,751 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:57:08,751 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:57:08,751 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:57:08,775 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:57:08,775 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:57:08,775 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:57:08,775 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:57:08,775 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:57:08,776 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:57:08,776 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:57:16,497 - api - INFO - API: Starting new conversation
+2025-03-24 18:57:16,497 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:57:16,498 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:57:16,498 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:57:16,498 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:57:16,498 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:57:18,109 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:57:18,111 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:57:18,111 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:57:18,111 - api - INFO - API: Conversation started successfully
+2025-03-24 18:57:26,930 - api - INFO - API: Processing message in stage: initial
+2025-03-24 18:57:26,930 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 18:57:26,930 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 18:57:26,930 - workflow_orchestrator - INFO - Analysis requested with URL, starting workflow
+2025-03-24 18:57:26,930 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 18:57:26,930 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 18:57:26,930 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 18:57:26,930 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 18:57:26,930 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 18:57:26,930 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 18:57:26,930 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 18:57:30,528 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 18:57:30,528 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 18:57:30,528 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 18:57:30,528 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 18:57:30,528 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 18:57:30,528 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 18:57:30,528 - workflow_orchestrator - WARNING - Product data missing title
+2025-03-24 18:57:30,528 - workflow_orchestrator - WARNING - Product data missing features, adding placeholder feature
+2025-03-24 18:57:30,528 - workflow_orchestrator - WARNING - Product data missing description
+2025-03-24 18:57:30,528 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 18:57:30,528 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:57:30,528 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:57:30,528 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:57:33,171 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:57:33,172 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:57:33,172 - workflow_orchestrator - INFO - Advancing workflow stage to market_research
+2025-03-24 18:57:33,172 - workflow_orchestrator - INFO - Starting market research
+2025-03-24 18:57:33,172 - workflow_orchestrator - INFO - Using product title for market research: 'Unknown Product'
+2025-03-24 18:57:33,172 - workflow_orchestrator - INFO - Executing SERP analysis for query: 'Unknown Product'
+2025-03-24 18:57:33,172 - tools - INFO - Executing tool requested: serp_analysis
+2025-03-24 18:57:33,172 - tools - INFO - Executing tool: serp_analysis with parameters: {'query': 'Unknown Product', 'results_count': 10}
+2025-03-24 18:57:33,172 - tools.serp_analysis_tool - INFO - Using SerpAPI to analyze query: Unknown Product
+2025-03-24 18:57:35,104 - tools.serp_analysis_tool - INFO - Successfully analyzed market data for query: Unknown Product
+2025-03-24 18:57:35,104 - tools.serp_analysis_tool - INFO - Found 5 competitors and 10 keywords
+2025-03-24 18:57:35,104 - tools - INFO - Tool execution completed: serp_analysis, success: True
+2025-03-24 18:57:35,104 - workflow_orchestrator - INFO - Successfully completed market research, storing results
+2025-03-24 18:57:35,104 - workflow_orchestrator - INFO - Generating response with market information
+2025-03-24 18:57:35,105 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:57:35,105 - workflow_orchestrator - INFO - Using system prompt for stage: market_research
+2025-03-24 18:57:35,105 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:57:57,426 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:57:57,427 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:57:57,427 - api - INFO - API: Message processed, new stage: market_research
+2025-03-24 18:59:51,402 - root - INFO - Firecrawl library imported successfully
+2025-03-24 18:59:51,404 - root - INFO - SerpAPI library imported successfully
+2025-03-24 18:59:51,405 - tools - INFO - Directly registering tool instances...
+2025-03-24 18:59:51,405 - tools - INFO - Creating FirecrawlerTool instance
+2025-03-24 18:59:51,405 - tools.firecrawler_tool - INFO - FirecrawlApp initialized successfully
+2025-03-24 18:59:51,405 - tools - INFO - Successfully created FirecrawlerTool with name: firecrawler
+2025-03-24 18:59:51,406 - tools - INFO - Creating SerpAnalysisTool instance
+2025-03-24 18:59:51,406 - tools.serp_analysis_tool - INFO - SerpAnalysisTool initialized successfully
+2025-03-24 18:59:51,406 - tools - INFO - Successfully created SerpAnalysisTool with name: serp_analysis
+2025-03-24 18:59:51,406 - tools - INFO - Creating CategoryTreeTool instance
+2025-03-24 18:59:51,407 - tools.category_tree_tool - INFO - Attempting to load marketing categories from: marketing_categories.json
+2025-03-24 18:59:51,407 - tools.category_tree_tool - INFO - Successfully loaded marketing categories from: marketing_categories.json
+2025-03-24 18:59:51,407 - tools - INFO - Successfully created CategoryTreeTool with name: category_tree
+2025-03-24 18:59:51,407 - tools - INFO - Registered tools: ['firecrawler', 'serp_analysis', 'category_tree']
+2025-03-24 18:59:51,407 - tools - INFO - Tool initialization status: {'firecrawler': 'initialized', 'serp_analysis': 'initialized', 'category_tree': 'initialized'}
+2025-03-24 18:59:51,408 - api - INFO - Initializing WorkflowOrchestrator for API use
+2025-03-24 18:59:51,408 - workflow_orchestrator - INFO - Initializing WorkflowOrchestrator
+2025-03-24 18:59:51,408 - workflow_orchestrator - INFO - Setting up OpenAI client
+2025-03-24 18:59:51,431 - workflow_orchestrator - INFO - Initializing ToolRegistry
+2025-03-24 18:59:51,431 - workflow_orchestrator - INFO - Tool firecrawler initialized successfully
+2025-03-24 18:59:51,431 - workflow_orchestrator - INFO - Tool serp_analysis initialized successfully
+2025-03-24 18:59:51,431 - workflow_orchestrator - INFO - Tool category_tree initialized successfully
+2025-03-24 18:59:51,431 - workflow_orchestrator - INFO - Setting up initial workflow state
+2025-03-24 18:59:51,431 - workflow_orchestrator - INFO - WorkflowOrchestrator initialization complete
+2025-03-24 18:59:51,431 - api - INFO - WorkflowOrchestrator initialized successfully
+2025-03-24 18:59:58,171 - api - INFO - API: Starting new conversation
+2025-03-24 18:59:58,171 - workflow_orchestrator - INFO - Starting new conversation
+2025-03-24 18:59:58,171 - workflow_orchestrator - INFO - Generating initial greeting message
+2025-03-24 18:59:58,171 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 18:59:58,171 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 18:59:58,171 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 18:59:59,690 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 18:59:59,692 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 18:59:59,692 - workflow_orchestrator - INFO - Conversation started
+2025-03-24 18:59:59,692 - api - INFO - API: Conversation started successfully
+2025-03-24 19:00:06,008 - api - INFO - API: Processing message in stage: initial
+2025-03-24 19:00:06,008 - workflow_orchestrator - INFO - Processing user message in stage: initial
+2025-03-24 19:00:06,008 - workflow_orchestrator - INFO - Current data state - Product data exists: False, Market data exists: False, Category data exists: False, Final results exists: False
+2025-03-24 19:00:06,008 - workflow_orchestrator - INFO - Analysis requested with URL, starting workflow
+2025-03-24 19:00:06,008 - workflow_orchestrator - INFO - Handling URL analysis
+2025-03-24 19:00:06,008 - workflow_orchestrator - INFO - Analyzing URL: https://sleepyowl.co/
+2025-03-24 19:00:06,008 - workflow_orchestrator - INFO - Executing firecrawler tool
+2025-03-24 19:00:06,008 - tools - INFO - Executing tool requested: firecrawler
+2025-03-24 19:00:06,008 - tools - INFO - Executing tool: firecrawler with parameters: {'url': 'https://sleepyowl.co/', 'depth': 2}
+2025-03-24 19:00:06,008 - tools.firecrawler_tool - INFO - Executing firecrawler tool with URL: https://sleepyowl.co/, depth: 2
+2025-03-24 19:00:06,008 - tools.firecrawler_tool - INFO - Calling FirecrawlApp.scrape_url with URL: https://sleepyowl.co/
+2025-03-24 19:01:09,198 - tools.firecrawler_tool - INFO - Successfully received response from Firecrawl API for URL: https://sleepyowl.co/
+2025-03-24 19:01:09,199 - tools.firecrawler_tool - INFO - Successfully parsed product data from URL: https://sleepyowl.co/
+2025-03-24 19:01:09,199 - tools.firecrawler_tool - INFO - Product title: 
+2025-03-24 19:01:09,199 - tools.firecrawler_tool - INFO - Product price: 
+2025-03-24 19:01:09,199 - tools - INFO - Tool execution completed: firecrawler, success: True
+2025-03-24 19:01:09,199 - workflow_orchestrator - INFO - Successfully analyzed URL, storing product data
+2025-03-24 19:01:09,199 - workflow_orchestrator - WARNING - Product data missing title
+2025-03-24 19:01:09,199 - workflow_orchestrator - WARNING - Product data missing features, adding placeholder feature
+2025-03-24 19:01:09,199 - workflow_orchestrator - WARNING - Product data missing description
+2025-03-24 19:01:09,199 - workflow_orchestrator - INFO - Generating response with product information
+2025-03-24 19:01:09,199 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 19:01:09,199 - workflow_orchestrator - INFO - Using system prompt for stage: initial
+2025-03-24 19:01:09,199 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 19:01:11,509 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:01:11,511 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 19:01:11,511 - workflow_orchestrator - INFO - Advancing workflow stage to market_research
+2025-03-24 19:01:11,511 - workflow_orchestrator - INFO - Starting market research
+2025-03-24 19:01:11,511 - workflow_orchestrator - INFO - Using product title for market research: 'Unknown Product'
+2025-03-24 19:01:11,511 - workflow_orchestrator - INFO - Executing SERP analysis for query: 'Unknown Product'
+2025-03-24 19:01:11,511 - tools - INFO - Executing tool requested: serp_analysis
+2025-03-24 19:01:11,511 - tools - INFO - Executing tool: serp_analysis with parameters: {'query': 'Unknown Product', 'results_count': 10}
+2025-03-24 19:01:11,511 - tools.serp_analysis_tool - INFO - Using SerpAPI to analyze query: Unknown Product
+2025-03-24 19:01:12,180 - tools.serp_analysis_tool - INFO - Successfully analyzed market data for query: Unknown Product
+2025-03-24 19:01:12,180 - tools.serp_analysis_tool - INFO - Found 5 competitors and 10 keywords
+2025-03-24 19:01:12,180 - tools - INFO - Tool execution completed: serp_analysis, success: True
+2025-03-24 19:01:12,180 - workflow_orchestrator - INFO - Successfully completed market research, storing results
+2025-03-24 19:01:12,180 - workflow_orchestrator - INFO - Generating response with market information
+2025-03-24 19:01:12,180 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 19:01:12,180 - workflow_orchestrator - INFO - Using system prompt for stage: market_research
+2025-03-24 19:01:12,180 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 19:01:27,152 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:01:27,153 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 19:01:27,153 - workflow_orchestrator - INFO - Advancing workflow stage to category_mapping
+2025-03-24 19:01:27,153 - workflow_orchestrator - INFO - Starting optimized category mapping
+2025-03-24 19:01:27,153 - workflow_orchestrator - INFO - Getting all marketing categories
+2025-03-24 19:01:27,153 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 19:01:27,153 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_toplevel'}
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Getting all top-level categories for LLM to choose from
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Getting all top-level categories
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Found 8 top-level categories
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Returning 8 top-level categories for LLM exploration
+2025-03-24 19:01:27,153 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 19:01:27,153 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 19:01:27,153 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_subcategories', 'parent_category': 'Behaviors'}
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Getting subcategories for category: Behaviors
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Looking for subcategories of: Behaviors
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Found 3 subcategories for Behaviors
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Returning 3 subcategories for parent category: Behaviors
+2025-03-24 19:01:27,153 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 19:01:27,153 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 19:01:27,153 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_subcategories', 'parent_category': 'Demographics'}
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Getting subcategories for category: Demographics
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Looking for subcategories of: Demographics
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Found 1 subcategories for Demographics
+2025-03-24 19:01:27,153 - tools.category_tree_tool - INFO - Returning 1 subcategories for parent category: Demographics
+2025-03-24 19:01:27,153 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 19:01:27,153 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 19:01:27,153 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_subcategories', 'parent_category': 'Financial'}
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Getting subcategories for category: Financial
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Looking for subcategories of: Financial
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Found 3 subcategories for Financial
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Returning 3 subcategories for parent category: Financial
+2025-03-24 19:01:27,154 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 19:01:27,154 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 19:01:27,154 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_subcategories', 'parent_category': 'Home'}
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Getting subcategories for category: Home
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Looking for subcategories of: Home
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Found 3 subcategories for Home
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Returning 3 subcategories for parent category: Home
+2025-03-24 19:01:27,154 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 19:01:27,154 - tools - INFO - Executing tool requested: category_tree
+2025-03-24 19:01:27,154 - tools - INFO - Executing tool: category_tree with parameters: {'product_description': 'Online product at https://sleepyowl.co/', 'mode': 'explore_subcategories', 'parent_category': 'Interests'}
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Getting subcategories for category: Interests
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Looking for subcategories of: Interests
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Found 2 subcategories for Interests
+2025-03-24 19:01:27,154 - tools.category_tree_tool - INFO - Returning 2 subcategories for parent category: Interests
+2025-03-24 19:01:27,154 - tools - INFO - Tool execution completed: category_tree, success: True
+2025-03-24 19:01:27,155 - workflow_orchestrator - INFO - Making single comprehensive LLM call for category analysis
+2025-03-24 19:01:56,119 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:01:56,120 - workflow_orchestrator - INFO - Generating response with category information
+2025-03-24 19:01:56,120 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 19:01:56,121 - workflow_orchestrator - INFO - Using system prompt for stage: category_mapping
+2025-03-24 19:01:56,121 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 19:02:16,792 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:02:16,793 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Advancing workflow stage to audience_segmentation
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Generating audience segments
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Found 3 audience segments in category data
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Segment 1: Affluent Fashion Enthusiasts
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Segment 2: Educated Urban Professionals
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Segment 3: High-Net-Worth Individuals
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Generating response with audience segments
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Using system prompt for stage: audience_segmentation
+2025-03-24 19:02:16,794 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 19:02:49,439 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:02:49,441 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 19:02:49,441 - workflow_orchestrator - INFO - Advancing workflow stage to marketing_strategy
+2025-03-24 19:02:49,441 - workflow_orchestrator - INFO - Generating marketing strategies
+2025-03-24 19:02:49,441 - workflow_orchestrator - INFO - Creating marketing strategies prompt
+2025-03-24 19:02:49,441 - workflow_orchestrator - INFO - Calling _generate_marketing_strategies method
+2025-03-24 19:02:49,441 - workflow_orchestrator - INFO - Generating marketing strategies with GPT-4
+2025-03-24 19:03:03,974 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:03:03,979 - workflow_orchestrator - INFO - Received marketing strategies response from GPT-4
+2025-03-24 19:03:03,979 - workflow_orchestrator - INFO - Parsed 6 marketing strategies
+2025-03-24 19:03:03,979 - workflow_orchestrator - INFO - Generated 6 marketing strategies
+2025-03-24 19:03:03,979 - workflow_orchestrator - INFO - Creating response with marketing strategies
+2025-03-24 19:03:03,979 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 19:03:03,979 - workflow_orchestrator - INFO - Using system prompt for stage: marketing_strategy
+2025-03-24 19:03:03,979 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 19:03:21,499 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:03:21,500 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 19:03:21,500 - workflow_orchestrator - INFO - Advancing workflow stage to final_summary
+2025-03-24 19:03:21,500 - workflow_orchestrator - INFO - Generating final summary
+2025-03-24 19:03:21,500 - workflow_orchestrator - INFO - Creating final summary for product: Unknown Product
+2025-03-24 19:03:21,500 - workflow_orchestrator - INFO - Final summary generated successfully
+2025-03-24 19:03:21,500 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 19:03:21,500 - workflow_orchestrator - INFO - Using system prompt for stage: final_summary
+2025-03-24 19:03:21,501 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 19:03:23,850 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:03:23,851 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 19:03:23,851 - api - INFO - API: Message processed, new stage: final_summary
+2025-03-24 19:17:56,942 - api - INFO - API: Processing message in stage: final_summary
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - Processing user message in stage: final_summary
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - Current data state - Product data exists: True, Market data exists: True, Category data exists: True, Final results exists: True
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - Product data - Title: Unknown Product, Features count: 1
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - Market data - Keywords count: 10, Competitors count: 5
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - Category data - Categories count: 3, Segments count: 3
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - In final_summary stage, processing follow-up question
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - Getting AI response
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - Using system prompt for stage: final_summary
+2025-03-24 19:17:56,942 - workflow_orchestrator - INFO - Calling OpenAI API for chat completion
+2025-03-24 19:18:14,883 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 19:18:14,885 - workflow_orchestrator - INFO - Received AI response
+2025-03-24 19:18:14,885 - api - INFO - API: Message processed, new stage: final_summary

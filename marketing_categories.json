@@ -1,0 +1,494 @@
+{
+  "categories": [
+    {
+      "name": "Demographics",
+      "description": "Basic demographic targeting options",
+      "subcategories": [
+        {
+          "name": "Education",
+          "description": "Target based on education level and background",
+          "subcategories": [
+            {
+              "name": "Education Level",
+              "values": [
+                "Associate Degree",
+                "College Grad",
+                "Doctorate Degree",
+                "High School Grad",
+                "In College",
+                "In Grad School",
+                "In High School",
+                "Master's Degree",
+                "Professional Degree",
+                "Some College",
+                "Some Grad School",
+                "Some High School"
+              ]
+            },
+            {
+              "name": "Field Of Study",
+              "description": "Academic disciplines and areas of study"
+            },
+            {
+              "name": "Schools",
+              "description": "Specific educational institutions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Financial",
+      "description": "Target based on financial status and income",
+      "subcategories": [
+        {
+          "name": "Income",
+          "values": [
+            "$40,000 – $49,999",
+            "$50,000 – $74,999",
+            "$75,000 – $99,999",
+            "$100,000 – $124,999",
+            "$125,000 – $149,999",
+            "$150,000 – $249,999",
+            "$250,000 – $349,999",
+            "$350,000 – $499,999",
+            "Over $500,000"
+          ]
+        },
+        {
+          "name": "Net Worth",
+          "values": [
+            "$100,000 – $249,999",
+            "$250,000 – $499,999",
+            "$500,000 – $749,999",
+            "$750,000 – $999,999",
+            "$1,000,000 – $1,999,999",
+            "Over $2,000,000"
+          ]
+        },
+        {
+          "name": "Liquid Assets",
+          "values": [
+            "$1 – $25,000",
+            "$25,000 – $49,999",
+            "$50,000 – $99,999",
+            "$100,000 – $249,999",
+            "$250,000 – $499,999",
+            "$500,000 – $999,999",
+            "$1,000,000 – $1,999,999",
+            "$2,000,000 – $2,999,999"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Home",
+      "description": "Target based on home ownership and type",
+      "subcategories": [
+        {
+          "name": "Home Ownership",
+          "values": [
+            "First Time Homebuyer",
+            "Homeowners",
+            "Renters"
+          ]
+        },
+        {
+          "name": "Home Type",
+          "values": [
+            "Apartment",
+            "Condo",
+            "Multi-family home",
+            "Single"
+          ]
+        },
+        {
+          "name": "Home Value",
+          "values": [
+            "$50,000 – $99,999",
+            "$100,000 – $199,999",
+            "$200,000 – $299,999",
+            "$300,000 – $499,999",
+            "$500,000 – $699,999",
+            "$700,000 – $999,999",
+            "$1,000,000 – $199,999",
+            "Over $2,000,000"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Life Events",
+      "description": "Target based on important life events",
+      "subcategories": [
+        {
+          "name": "Relationship Events",
+          "values": [
+            "Away from family",
+            "Away from hometown",
+            "Long-distance relationship",
+            "New relationship",
+            "Newly engaged (1 year)",
+            "Newly engaged (3 months)",
+            "Newly engaged (6 months)",
+            "Newlywed (1 year)",
+            "Newlywed (3 months)",
+            "Newlywed (6 months)"
+          ]
+        },
+        {
+          "name": "Work Events",
+          "values": [
+            "New job",
+            "Recently moved"
+          ]
+        },
+        {
+          "name": "Anniversary",
+          "values": [
+            "Anniversary within 30 days",
+            "Anniversary within 31-60 days"
+          ]
+        },
+        {
+          "name": "Birthday",
+          "subcategories": [
+            {
+              "name": "Upcoming Birthday",
+              "values": [
+                "Birthday in January",
+                "Birthday in February",
+                "Birthday in March",
+                "Birthday in April",
+                "Birthday in May",
+                "Birthday in June",
+                "Birthday in July",
+                "Birthday in August",
+                "Birthday in September",
+                "Birthday in October",
+                "Birthday in November",
+                "Birthday in December"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Interests",
+      "description": "Target based on interests and hobbies",
+      "subcategories": [
+        {
+          "name": "Business and Industry",
+          "subcategories": [
+            {
+              "name": "Business Areas",
+              "values": [
+                "Advertising",
+                "Agriculture",
+                "Architecture",
+                "Aviation",
+                "Banking",
+                "Business",
+                "Construction",
+                "Design",
+                "Economics",
+                "Engineering",
+                "Entrepreneurship",
+                "Health Care",
+                "Higher Education",
+                "Management",
+                "Marketing",
+                "Nursing",
+                "Real Estate",
+                "Retail",
+                "Sales",
+                "Science",
+                "Small business"
+              ]
+            },
+            {
+              "name": "Online Business",
+              "values": [
+                "Digital Marketing",
+                "Display Advertising",
+                "Email Marketing",
+                "Online Advertising",
+                "Search Engine Optimization",
+                "Social Media",
+                "Social Media Marketing",
+                "Web Design",
+                "Web Development",
+                "Web Hosting"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "subcategories": [
+            {
+              "name": "Games",
+              "values": [
+                "Action Games",
+                "Board Games",
+                "Browser Games",
+                "Card Games",
+                "Casino Games",
+                "First-person shooter games",
+                "Gambling",
+                "Massively multiplayer online games",
+                "Online games",
+                "Online poker",
+                "Puzzle video games",
+                "Racing games",
+                "Role-playing games",
+                "Shooter games",
+                "Simulation games",
+                "Sports games",
+                "Strategy games",
+                "Video games",
+                "Word games"
+              ]
+            },
+            {
+              "name": "Live Events",
+              "values": [
+                "Ballet",
+                "Bars",
+                "Concerts",
+                "Dancehalls",
+                "Music Festivals",
+                "Nightclubs",
+                "Parties",
+                "Plays",
+                "Theatre"
+              ]
+            },
+            {
+              "name": "Movies",
+              "values": [
+                "Action movies",
+                "Animated movies",
+                "Bollywood movies",
+                "Comedy movies",
+                "Documentary movies",
+                "Drama movies",
+                "Fantasy movies",
+                "Horror movies",
+                "Musical theatre",
+                "Science fiction movies",
+                "Thriller movies"
+              ]
+            },
+            {
+              "name": "Music",
+              "values": [
+                "Blues music",
+                "Classical music",
+                "Country music",
+                "Dance music",
+                "Electronic music",
+                "Gospel music",
+                "Heavy metal music",
+                "Hip hop music",
+                "Jazz music",
+                "Music videos",
+                "Pop music",
+                "Rhythm and blues music",
+                "Rock music",
+                "Soul music"
+              ]
+            },
+            {
+              "name": "Reading",
+              "values": [
+                "Books",
+                "Comics",
+                "E-books",
+                "Fiction books",
+                "Literature",
+                "Magazines",
+                "Manga",
+                "Mystery fiction",
+                "Newspapers",
+                "Non-fiction books",
+                "Romance novels"
+              ]
+            },
+            {
+              "name": "TV",
+              "values": [
+                "TV comedies",
+                "TV game shows",
+                "TV reality shows",
+                "TV talkshows"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shopping and Fashion",
+      "description": "Target based on shopping habits and fashion preferences",
+      "subcategories": [
+        {
+          "name": "Beauty",
+          "values": [
+            "Beauty salons",
+            "Cosmetics",
+            "Fragrances",
+            "Hair products",
+            "Spas",
+            "Tattoos"
+          ]
+        },
+        {
+          "name": "Clothing",
+          "subcategories": [
+            {
+              "name": "Clothing Types",
+              "values": [
+                "Children's clothing",
+                "Men's clothing",
+                "Shoes",
+                "Women's clothing"
+              ]
+            },
+            {
+              "name": "Fashion Accessories",
+              "values": [
+                "Dresses",
+                "Handbags",
+                "Jewelry",
+                "Sunglasses"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Shopping",
+          "values": [
+            "Boutiques",
+            "Coupons",
+            "Discount stores",
+            "Luxury goods",
+            "Online shopping",
+            "Shopping malls"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Technology",
+      "description": "Target based on technology interests and usage",
+      "subcategories": [
+        {
+          "name": "Computers",
+          "values": [
+            "Computer memory",
+            "Computer monitors",
+            "Computer processors",
+            "Computer servers",
+            "Desktop computers",
+            "Free software",
+            "Hard drives",
+            "Network storage",
+            "Software",
+            "Tablet computers"
+          ]
+        },
+        {
+          "name": "Consumer Electronics",
+          "values": [
+            "Audio equipment",
+            "Camcorders",
+            "Cameras",
+            "E-book readers",
+            "GPS devices",
+            "Game consoles",
+            "Mobile phones",
+            "Portable media players",
+            "Projectors",
+            "Smartphones",
+            "Televisions"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Behaviors",
+      "description": "Target based on observed behaviors and actions",
+      "subcategories": [
+        {
+          "name": "Purchase Behavior",
+          "subcategories": [
+            {
+              "name": "Engaged Shoppers",
+              "description": "People who frequently engage with shopping content"
+            },
+            {
+              "name": "Buyer Profiles",
+              "values": [
+                "Coupon users",
+                "DIYers",
+                "Fashionistas",
+                "Foodies",
+                "Gadget enthusiast",
+                "Gamers",
+                "Green living",
+                "Healthy and fit",
+                "Outdoor enthusiasts",
+                "Shoppers",
+                "Spa enthusiasts",
+                "Sportsmen",
+                "Trendy homemakers"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Digital Activities",
+          "subcategories": [
+            {
+              "name": "Browser Usage",
+              "values": [
+                "Chrome",
+                "Firefox",
+                "Internet Explorer",
+                "Microsoft Edge",
+                "Opera",
+                "Safari"
+              ]
+            },
+            {
+              "name": "Operating System",
+              "values": [
+                "Mac OS X",
+                "Mac Sierra",
+                "Windows 10",
+                "Windows 7",
+                "Windows 8",
+                "Windows Vista",
+                "Windows XP"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Travel",
+          "values": [
+            "Business travelers",
+            "Commuters",
+            "Cruises",
+            "Family vacations",
+            "Frequent Travelers",
+            "Frequent flyers",
+            "Leisure travelers"
+          ]
+        }
+      ]
+    }
+  ]
+} 
