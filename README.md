@@ -1,4 +1,4 @@
-# Audience Andy
+# Audience Segmentation
 
 A comprehensive product analysis system designed to help users analyze products and identify potential target audiences for marketing. The system uses AI-powered tools to analyze product URLs, conduct market research, and generate audience segments and marketing strategies.
 
