@@ -591,7 +591,7 @@ class WorkflowOrchestrator:
             logger.info("Making single comprehensive LLM call for category analysis")
             try:
                 analysis_response = await self.client.chat.completions.create(
-                    model="gpt-4-turbo",
+                    model="gpt-4o-mini",
                     messages=[
                         {"role": "system", "content": "You are an AI specializing in marketing categorization and audience segmentation. Provide comprehensive analysis with your response in JSON format."},
                         {"role": "user", "content": analysis_prompt}
@@ -932,7 +932,7 @@ class WorkflowOrchestrator:
             
             logger.info("Calling OpenAI API for chat completion")
             response = await self.client.chat.completions.create(
-                model="gpt-4-turbo",  # Use the appropriate GPT-4 model
+                model="gpt-4o-mini",  # Use the appropriate GPT-4 model
                 messages=messages,
                 temperature=0.7,
                 max_tokens=1000,
@@ -955,7 +955,7 @@ class WorkflowOrchestrator:
         try:
             logger.info("Generating marketing strategies with GPT-4")
             response = await self.client.chat.completions.create(
-                model="gpt-4-turbo",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "You are a marketing strategy expert. Generate specific, actionable marketing strategies based on product and audience data."},
                     {"role": "user", "content": prompt}
@@ -965,7 +965,7 @@ class WorkflowOrchestrator:
             )
             
             strategy_text = response.choices[0].message.content
-            logger.info("Received marketing strategies response from GPT-4")
+            logger.info("Received marketing strategies response from GPT-4o-mini")
             
             # Parse strategies (in a real implementation, you'd want more structured output)
             strategies = []
